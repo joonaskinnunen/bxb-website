@@ -4,13 +4,27 @@ $gradient: linear-gradient(-45deg, #283576 0%, #2d97b7 100%);
 $body-font: 'Avenir', sans-serif;
 $heading-font: 'Avenir', sans-serif;
 
+*{
+    font-family: $body-font;
+}
+
 /* General */
 body {
-    font-family: $body-font;
     color: rgb(112, 112, 112);
     line-height: 1.5em;
     font-size: 1em;
     overflow: scroll;
+    padding: 0;
+    margin: 0;
+}
+
+canvas {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 300px;
+    top: 50px;
 }
 
 #content {
@@ -48,7 +62,9 @@ button:focus {
     display: flex;
     position: sticky;
     top: 0;
+    box-sizing: border-box;
     padding: 1%;
+    width: 100vw;
     background-color: rgba(255, 255, 255, 0.9);
     align-items: center;
 }
@@ -96,7 +112,7 @@ button:focus {
 
 /* Banner */
 #banner { text-align: center; }
-#biglogo {
+#bigLogo {
     width: 60%;
 }
 
