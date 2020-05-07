@@ -6,11 +6,21 @@ Fix map sizing
 */
 /* General Formatting */
 body {
-  font-family: "Avenir", sans-serif;
   color: #707070;
   line-height: 1.5em;
   font-size: 1em;
   overflow: scroll;
+  padding: 0;
+  margin: 0;
+}
+
+canvas {
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 300px;
+  top: 50px;
 }
 
 h2 {
