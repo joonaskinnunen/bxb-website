@@ -12,15 +12,7 @@
 </head>
 
 <body>
-    <nav id="topnav">
-        <img src="Logo.png" id="navlogo"></img>
-        <nav id="topnav-right">
-            <a href="index.html"><button class="navbutton">Home</button></a>
-            <a href="faqs.html"><button class="navbutton">FAQ</button></a>
-            <a href="aboutus.html"><button class="navbutton">About Us</button></a>
-            <a href="signup.html"><button class="navbutton">Sign Up</button></a>
-        </nav>
-    </nav>
+    
 
     <div class="content">
         <!--Banner-->
@@ -31,7 +23,7 @@
             <h2>// Meet the Instructors</h2><br>
             <div class="instructors-container">
                 <span class="instructors-item">
-                    <img src="SydneySquare.jpg"><br>
+                    <img src="img/SydneySquare.jpg"><br>
                     <strong>Sydney Von Arx</strong>
                     <div>
                         <p>I am Sydney Von Arx, and I love to code! I’m a computer science major at Stanford. I have
@@ -43,7 +35,7 @@
                     </div>
                 </span>
                 <span class="instructors-item">
-                    <img src="SelenaSquare.jpg"><br>
+                    <img src="img/SelenaSquare.jpg"><br>
                     <strong>Selena Zhang</strong>
                     <div>
                         <p>I’m Selena Zhang, and coding is my passion! Next year, I plan to study computer science at
@@ -58,6 +50,5 @@
         </div>
     </div>
     <!--Footer-->
-    <div id="footer">
-        <p>&copy; Bit by Bit Coding</p>
-    </div>
+    <?php include 'footer.php' ?>
+</body>

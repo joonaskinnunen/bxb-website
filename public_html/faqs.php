@@ -13,15 +13,7 @@
 
 <body>
     <!--Nav Bar-->
-    <nav id="topnav">
-        <img src="Logo.png" id="navlogo" onclick="location: 'index.html'"></img>
-        <nav id="topnav-right">
-            <a href="index.html"><button class="navbutton">Home</button></a>
-            <a href="faqs.html"><button class="navbutton">FAQ</button></a>
-            <a href="aboutus.html"><button class="navbutton">About Us</button></a>
-            <a href="signup.html"><button class="navbutton">Sign Up</button></a>
-        </nav>
-    </nav>
+    <?php include 'nav.php' ?>
 
     <div id="content">
     <div id="banner">
@@ -112,14 +104,7 @@
     </div>
     </div>
 
-<div id="footer">
-    Bit by Bit Coding is a registered nonprofit
-    <br>
-    EIN 84-5025902
-    <br>
-    &copy 2020 Bit by Bit Coding
-</div>
-
+    <?php include 'footer.php' ?>
     <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>

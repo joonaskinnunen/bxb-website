@@ -8,8 +8,8 @@ Fix map sizing
 $main: #2d97b7;
 $dark: #283576;
 $gradient: linear-gradient(-45deg, #283576 0%, #2d97b7 100%);
-$body-font: 'Avenir', sans-serif;
-$heading-font: 'Avenir', sans-serif;
+$body-font: 'Roboto', 'Avenir', sans-serif;
+$heading-font: 'Nunito', 'Avenir', sans-serif;
 
 *{
     font-family: $body-font;
@@ -142,16 +142,12 @@ img {
     to { transform: scale(1); }
 }
 
-/* Banner */
-#particles-js, #particles-js2 {
-    background: url("Logo Big.png") auto no-repeat center/contain;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-}
+
 #banner { text-align: center; }
 #bigLogo {
     width: 60%;
+    display: block;
+    margin: 0 auto;
 }
 
 /* Footer */
@@ -160,7 +156,7 @@ img {
     padding: 0.5vh 2vw;
     color: white;
 
-    text-align: left;
+    text-align: center;
     font-size: 0.8em;
 }
 
