@@ -2,13 +2,7 @@
 
 <head>
     <title>Hello World</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <link
-            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-            rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;900&display=swap"
-          rel="stylesheet">
-    <link rel="icon" type="image/png" href="img/favicon.png">
+    <?php include 'head.php' ?>ss
 </head>
 
 <body>
@@ -27,8 +21,8 @@
     <!--Photos-->
     <div class="section">
         <div class="home-photos">
-            <img src="img/Row.jpg">
-            <img src="img/bunnyEars.jpg">
+            <img src="imgs/Row.jpg">
+            <img src="imgs/bunnyEars.jpg">
         </div>
     </div>
 
@@ -61,7 +55,7 @@
                     <div>
                         <p><strong>Cost: </strong><br>
                             Early bird (before June 1st): $35<br>
-                            Regular: $65 (scholarships available)</p>
+                            Regular: $50 (scholarships available)</p>
                     </div>
                 </div>
                 <div class="details-item">
@@ -142,8 +136,8 @@
 
 <script src="https://code.jquery.com/jquery-3.5.0.min.js"
         integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
-<script src="particles.js"></script>
-<script src="app.js"></script>
+<script src="scripts/particles.js"></script>
+<script src="scripts/app.js"></script>
 <script src="scripts/script.js"></script>
 
 </body>

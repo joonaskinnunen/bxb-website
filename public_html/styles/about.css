@@ -1,7 +1,3 @@
-$main: #2d97b7;
-$dark: #283576;
-$gradient: linear-gradient(-45deg, #283576 0%, #2d97b7 100%);
-
 /* About Us Page */
 .instructors-container {
   display: flex;
@@ -19,12 +15,14 @@ $gradient: linear-gradient(-45deg, #283576 0%, #2d97b7 100%);
 .instructors-item img {
   height: 250px;
   border-radius: 10px;
-  border-bottom: 3px solid $dark;
+  border-bottom: 3px solid #283576;
 }
 
 .instructors-item strong {
-  color: $dark;
+  color: #283576;
   text-align: center;
   font-size: 1.5em;
   margin-top: 20px;
 }
+
+/*# sourceMappingURL=about.css.map */

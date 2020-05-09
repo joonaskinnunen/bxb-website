@@ -2,28 +2,27 @@
 
 <head>
     <title>About Us: Hello World</title>
-    <link rel="stylesheet" href="style.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;900&display=swap"
-        rel="stylesheet">
-    <link rel="icon" type="image/png" href="favicon.png">
+
+    <?php include 'head.php' ?>
+
+    <link rel="stylesheet" href="styles/about.css">
+
 </head>
 
 <body>
-    
+<?php include 'nav.php' ?>
 
-    <div class="content">
-        <!--Banner-->
-        <div id="particles-js"></div>
 
-        <!--Meet the Instructors-->
-        <div class="section">
-            <h2>// Meet the Instructors</h2><br>
-            <div class="instructors-container">
+<div class="content">
+    <!--Banner-->
+    <div id="particles-js"></div>
+
+    <!--Meet the Instructors-->
+    <div class="section">
+        <h2>// Meet the Instructors</h2><br>
+        <div class="instructors-container">
                 <span class="instructors-item">
-                    <img src="img/SydneySquare.jpg"><br>
+                    <img src="imgs/SydneySquare.jpg"><br>
                     <strong>Sydney Von Arx</strong>
                     <div>
                         <p>I am Sydney Von Arx, and I love to code! I’m a computer science major at Stanford. I have
@@ -34,8 +33,8 @@
                         </p>
                     </div>
                 </span>
-                <span class="instructors-item">
-                    <img src="img/SelenaSquare.jpg"><br>
+            <span class="instructors-item">
+                    <img src="imgs/SelenaSquare.jpg"><br>
                     <strong>Selena Zhang</strong>
                     <div>
                         <p>I’m Selena Zhang, and coding is my passion! Next year, I plan to study computer science at
@@ -46,9 +45,9 @@
                         </p>
                     </div>
                 </span>
-            </div>
         </div>
     </div>
-    <!--Footer-->
-    <?php include 'footer.php' ?>
+</div>
+<!--Footer-->
+<?php include 'footer.php' ?>
 </body>

@@ -2,13 +2,8 @@
 
 <head>
     <title>Sign Up: Hello World</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;900&display=swap"
-        rel="stylesheet">
-    <link rel="icon" type="image/png" href="img/favicon.png">
+    <?php include 'head.php' ?>
+    <link rel="stylesheet" href="styles/signup.css">
 </head>
 
 <body>
@@ -22,8 +17,10 @@
         <div class="section">
             <h2>// Sign Up</h2>
             <div id="signup-button">
-                <button class="signup-button" onclick="location.href = 'https://bit.ly/bxbinterestform'">Sign
+                <a href="https://bit.ly/bxbinterestform">
+                <button class="signup-button">Sign
                     Up</button>
+                </a>
             </div>
             <table>
                 <tr>
@@ -50,8 +47,7 @@
                 <tr>
                     <td>
                         <a href="http://jsfiddle.net/7mL9qze2/9/embedded/result/?username=Sydney">Click here</a> to see
-                        a
-                        sample project for this session and the code behind it!
+                        a sample project for this session and the code behind it!
                     </td>
                     <td>
                         <a href="http://jsfiddle.net/1e50gkz3/49/embedded/result/?username=Sydney">Click here</a> to see
