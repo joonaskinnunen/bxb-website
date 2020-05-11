@@ -1,3 +1,5 @@
+$('#canvas')[0].width = $('body').innerWidth();
+
 ((canvas) => {
     class Board {
       constructor (canvas, scale, colors) {
@@ -12,6 +14,7 @@
           handleMouseMove: this.handleMouseMove.bind(this),
           handleMouseUp: this.handleMouseUp.bind(this)
         }
+        this.offsetY = canvas.offsetTop;
       }
       
       init () {      
@@ -22,7 +25,7 @@
         this.setupBoard()
         this.setupCells()
         this.setupListeners()
-        
+
         this.ctx.fillStyle = hsla(...bg)
         this.ctx.fillRect(0, 0, this.w, this.h)      
       }
@@ -44,7 +47,7 @@
         this.w = this.ctx.canvas.width + this.scale
         this.h = this.ctx.canvas.height + this.scale
         
-        this.ctx.fillStyle = this.bgColor
+        //this.ctx.fillStyle = this.bgColor;
         this.ctx.fillRect(0, 0, this.w, this.h)
       }
       
@@ -71,9 +74,9 @@
       }
       
       setupListeners () {
-        this.ctx.canvas.addEventListener('mousedown', this.handlers.handleMouseDown)
-        this.ctx.canvas.addEventListener('mouseup', this.handlers.handleMouseUp)
-        this.ctx.canvas.addEventListener('mousemove', this.handlers.handleMouseMove)
+        document.addEventListener('mousedown', this.handlers.handleMouseDown)
+        document.addEventListener('mouseup', this.handlers.handleMouseUp)
+        document.addEventListener('mousemove', this.handlers.handleMouseMove)
       }
       
       drawAtCoords(clientX, clientY) {
@@ -81,6 +84,9 @@
         const y = Math.floor(clientY / this.scale)
         const i = (y * this.columns) + x
         const cell = this.cells[i]
+        if(typeof cell === 'undefined'){
+          return;
+        }
         const neighbors = cell.neighbors
         
         cell.alive = true
@@ -91,9 +97,9 @@
       }
       
       handleMouseDown (e) {
-        
+        const offsetY = this.offsetY;
         this.dragging = true
-        this.drawAtCoords(e.clientX, e.clientY)
+        this.drawAtCoords(e.clientX, e.clientY - offsetY)
       }
       
       handleMouseUp () {
@@ -111,9 +117,9 @@
       
       destroy () {
         window.cancelAnimationFrame(this.handlers.raf)
-        this.ctx.canvas.removeEventListener('mousedown', this.handlers.handleMouseDown)
-        this.ctx.canvas.removeEventListener('mouseup', this.handlers.handleMouseUp)
-        this.ctx.canvas.removeEventListener('mousemove', this.handlers.handleMouseMove)
+        document.removeEventListener('mousedown', this.handlers.handleMouseDown)
+        document.removeEventListener('mouseup', this.handlers.handleMouseUp)
+        document.removeEventListener('mousemove', this.handlers.handleMouseMove)
         this.cells = []
         this.dragging = false
         this.handlers = {

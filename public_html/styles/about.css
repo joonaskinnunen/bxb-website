@@ -1,15 +1,22 @@
 /* About Us Page */
 .instructors-container {
+  width: 100%;
   display: flex;
   align-items: center;
-  flex-flow: row nowrap;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 
 .instructors-item {
   display: inline-flex;
-  flex-flow: column nowrap;
-  width: 40%;
+  flex-flow: column;
+  max-width: 500px;
+  flex: 1 400px;
+  margin: 10px 20px;
+}
+.instructors-item p {
+  display: block;
+  text-align: center;
 }
 
 .instructors-item img {
@@ -23,6 +30,20 @@
   text-align: center;
   font-size: 1.5em;
   margin-top: 20px;
+}
+
+#canvas {
+  height: 300px;
+  width: 100%;
+}
+
+.section {
+  margin: 0 auto;
+  display: block;
+}
+
+#bigLogo {
+  mix-blend-mode: multiply;
 }
 
 /*# sourceMappingURL=about.css.map */

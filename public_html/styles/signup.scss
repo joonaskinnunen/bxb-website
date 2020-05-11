@@ -1,3 +1,25 @@
 $main: #2d97b7;
 $dark: #283576;
 $gradient: linear-gradient(-45deg, #283576 0%, #2d97b7 100%);
+
+/* Sign Up Page */
+
+#signup-button {
+  text-align: center;
+  transition: .5s;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+td {
+  padding: 1.5%;
+}
+
+.banner{
+  isolation: isolate;
+
+  #bigLogo{
+    mix-blend-mode: color-burn;
+  }
+
+}

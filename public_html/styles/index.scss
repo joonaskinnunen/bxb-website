@@ -1,0 +1,45 @@
+$main: #2d97b7;
+$dark: #283576;
+$gradient: linear-gradient(-45deg, #283576 0%, #2d97b7 100%);
+
+/* Photos */
+.home-photos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 80vw;
+}
+
+.home-photos img {
+  flex: 1 1 200px;
+}
+
+.details-item{
+  height: max-content;
+}
+
+/* Testmonials */
+.testimonial-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0 0;
+}
+
+.testimonial-item {
+  padding: 10px;
+  text-align: center;
+  flex: 1 1 200px;
+  flex-wrap: wrap;
+  /*width: 20%;*/
+}
+
+.testimonial-item strong {
+  color: $dark;
+}
+
+canvas{
+  top: 50px;
+}

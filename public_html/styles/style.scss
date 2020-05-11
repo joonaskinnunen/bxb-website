@@ -63,6 +63,18 @@ button {
     animation-fill-mode: forwards;
 }
 
+/* banner */
+.banner{
+    height: 300px;
+    display: flex;
+    align-content: center;
+
+    canvas{
+        position: absolute;
+        z-index: -1;
+    }
+}
+
 /* take this out */
 button:focus {
     outline: none;
@@ -242,52 +254,4 @@ img {
 #map {
     height: 100%;
     width: 100%;
-}
-
-/* Photos */
-.home-photos {
-    display: flex;
-    justify-content: center;
-}
-
-.home-photos img {
-    width: 45%;
-}
-
-/* Testmonials */
-.testimonial-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
-    list-style: none;
-    margin: 0 0;
-}
-
-.testimonial-item {
-    padding: 2%;
-    text-align: center;
-    flex: 1 1 200px;
-    flex-wrap: wrap;
-    /*width: 20%;*/
-}
-
-.testimonial-item strong {
-    color: $dark;
-}
-
-#zadie {
-    flex: 1 1 250px;
-}
-
-
-/* Sign Up Page */
-
-#signup-button {
-    text-align: center;
-    transition: .5s;
-}
-
-td {
-      padding: 1.5%;
 }

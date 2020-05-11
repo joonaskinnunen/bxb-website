@@ -9,12 +9,12 @@
 <body>
     <!--Nav Bar-->
     <?php include 'nav.php' ?>
-
-    <div id="content">
-    <div id="banner">
+    <div class="banner">
         <canvas id="canvas"></canvas>
         <img id="bigLogo" src="imgs/Logo.svg">
     </div>
+    <div id="content">
+
 
     <!--FAQs-->
     <div class="section">

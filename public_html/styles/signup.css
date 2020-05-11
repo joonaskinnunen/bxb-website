@@ -1,3 +1,20 @@
+/* Sign Up Page */
+#signup-button {
+  text-align: center;
+  transition: 0.5s;
+  font-weight: bold;
+  font-size: 2em;
+}
 
+td {
+  padding: 1.5%;
+}
+
+.banner {
+  isolation: isolate;
+}
+.banner #bigLogo {
+  mix-blend-mode: color-burn;
+}
 
 /*# sourceMappingURL=signup.css.map */

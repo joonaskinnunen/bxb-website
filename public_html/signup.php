@@ -8,14 +8,16 @@
 
 <body>
 <?php include 'nav.php' ?>
-
+<!--Banner-->
+<div class="banner">
+    <canvas id="canvas" height="300"></canvas>
+    <img id="bigLogo" src="imgs/Logo.svg" draggable="false">
+</div>
     <div class="content">
-        <!--Banner-->
-        <div id="particles-js" class="banner"></div>
+
 
         <!--Sign Up-->
         <div class="section">
-            <h2>// Sign Up</h2>
             <div id="signup-button">
                 <a href="https://bit.ly/bxbinterestform">
                 <button class="signup-button">Sign
@@ -25,10 +27,10 @@
             <table>
                 <tr>
                     <th>
-                        <h2>HTML/CSS Session</h2>
+                        <h2>// HTML/CSS Session</h2>
                     </th>
                     <th>
-                        <h2>Javascript Session</h2>
+                        <h2>// JavaScript Session</h2>
                     </th>
                 </tr>
                 <tr>
@@ -64,6 +66,7 @@
     </div>
     <!--Footer-->
     <?php include 'footer.php' ?>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
 
-    <script src="script.js"></script>
+    <script src="scripts/signup.js"></script>
 </body>

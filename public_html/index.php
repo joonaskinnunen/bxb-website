@@ -2,7 +2,8 @@
 
 <head>
     <title>Hello World</title>
-    <?php include 'head.php' ?>ss
+    <?php include 'head.php' ?>
+    <link rel="stylesheet" href="styles/index.css">
 </head>
 
 <body>
@@ -10,10 +11,9 @@
 <?php include 'nav.php' ?>
 
 <!--Banner-->
-<div id="particles-js" class="banner"></div>
-
-
-<img id="bigLogo" src="imgs/Logo.svg">
+<div id="particles-js" class="banner">
+    <img id="bigLogo" src="imgs/Logo.svg" draggable="false">
+</div>
 
 
 <div class="content">

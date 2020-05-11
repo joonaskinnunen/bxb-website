@@ -1,0 +1,43 @@
+/* Photos */
+.home-photos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 80vw;
+}
+
+.home-photos img {
+  flex: 1 1 200px;
+}
+
+.details-item {
+  height: max-content;
+}
+
+/* Testmonials */
+.testimonial-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0 0;
+}
+
+.testimonial-item {
+  padding: 10px;
+  text-align: center;
+  flex: 1 1 200px;
+  flex-wrap: wrap;
+  /*width: 20%;*/
+}
+
+.testimonial-item strong {
+  color: #283576;
+}
+
+canvas {
+  top: 50px;
+}
+
+/*# sourceMappingURL=index.css.map */
