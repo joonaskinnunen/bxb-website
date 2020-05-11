@@ -745,7 +745,7 @@ class Banner {
         this.drawBackground(false);
 
 
-        document.body.appendChild(this.canvas);
+        $('.banner').append(this.canvas);
         if (!this.initialized) {
             this.initialized = true;
             this.loop();

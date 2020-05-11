@@ -30,8 +30,7 @@
     <div class="section">
         <h2>// Details</h2>
         <div>
-            <div id="warning"><strong>Subject to change as the Coronavirus situation evolves. We'll keep you
-                    posted!</strong></div>
+            <div id="warning"><strong>Registration is OPEN. We are holding off on collecting payment until we know more about Oregon's plans to reopen and will keep you posted as the Coronavirus situation evolves! We are prepared to move our pgorgram online if necessary. if this happens, the program will be free, last about two hours each day, and we will not be able to provide anyone laptops.</strong></div>
             <div class="details-container">
                 <div class="details-item">
                     <div>

@@ -18,46 +18,42 @@
 
         <!--Sign Up-->
         <div class="section">
-            <div id="signup-button">
-                <a href="https://bit.ly/bxbinterestform">
+
+                <a href="https://bit.ly/bxbinterestform" class="signup-wrap">
                 <button class="signup-button">Sign
                     Up</button>
                 </a>
-            </div>
-            <table>
-                <tr>
-                    <th>
+<div id="'sessionWrap">
+            <div class="session"></div>
                         <h2>// HTML/CSS Session</h2>
-                    </th>
-                    <th>
-                        <h2>// JavaScript Session</h2>
-                    </th>
-                </tr>
-                <tr>
-                    <td>
-                        This session moves slower and will provide a more gentle introduction. Girls will develop a deep
-                        understanding of HTML and CSS and create their own customized webpage. Girls will also have the
-                        option to try JavaScript or to learn how to add animation to their websites. August 3rd-7th.
-                    </td>
-                    <td>
-                        A fast-and-furious dive into JavaScript and all participants will make their own simple game.
-                        This
-                        session will move at a faster pace and is better suited for those more familiar with technology.
-                        Prior programming experience is not required but is encouraged. August 10th-14th.
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="http://jsfiddle.net/7mL9qze2/9/embedded/result/?username=Sydney">Click here</a> to see
-                        a sample project for this session and the code behind it!
-                    </td>
-                    <td>
-                        <a href="http://jsfiddle.net/1e50gkz3/49/embedded/result/?username=Sydney">Click here</a> to see
-                        a
-                        sample project for this session and the code behind it!
-                    </td>
-                </tr>
-            </table>
+
+
+            <p>This session moves slower and will provide a more gentle introduction. Girls will develop a deep
+                understanding of HTML and CSS and create their own customized webpage. Girls will also have the
+                option to try JavaScript or to learn how to add animation to their websites. August 3rd-7th.</p>
+           <p> <a href="http://jsfiddle.net/7mL9qze2/9/embedded/result/?username=Sydney">Click here</a> to see a sample project for this session and the code behind it!</p>
+
+
+
+            <div class="session">
+                <h2>// JavaScript Session</h2>
+                <p>
+                    A fast-and-furious dive into JavaScript and all participants will make their own simple game.
+                    This
+                    session will move at a faster pace and is better suited for those more familiar with technology.
+                    Prior programming experience is not required but is encouraged. August 10th-14th.
+
+                </p>
+
+                <p>
+                    <a href="http://jsfiddle.net/1e50gkz3/49/embedded/result/?username=Sydney">Click here</a> to see
+                    a
+                    sample project for this session and the code behind it!
+                </p>
+
+            </div>
+</div>
+
 
             <div class="subtitle"><strong><br>Girls are encouraged to sign up for both sessions to explore all aspects
                     of

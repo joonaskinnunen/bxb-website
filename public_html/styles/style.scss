@@ -75,6 +75,7 @@ button {
     }
 }
 
+
 /* take this out */
 button:focus {
     outline: none;
@@ -106,9 +107,12 @@ img {
 }
 
 #navlogo {
-    height: calc(100% - 20px);
+    width: 200px;
     margin-top: 10px;
     margin-left: 10px;
+    .mobile {
+        display: none;
+    }
 }
 
 #navlogo-button {
@@ -121,8 +125,7 @@ img {
 }
 
 .navbutton {
-    animation-name: out;
-
+    transition: 0.5s ease-in-out;
     border: none;
     border-bottom: solid $main 1px;
     margin: 0 0.8vw;
@@ -136,9 +139,9 @@ img {
 }
 
 .navbutton:hover {
-    animation-name: in;
-    flex-grow: 2;
-    cursor: pointer;
+    font-weight: bold;
+    border-bottom-color: #e77d00;
+    color: #e77d00;
 }
 
 #banner { text-align: center; }
@@ -162,6 +165,31 @@ img {
 
     text-align: center;
     font-size: 0.8em;
+
+    .fa-stack{
+        transition: color 0.3s;
+        &:hover{
+            color: $dark;
+            .fa-inverse{
+                color: #fff;
+            }
+        }
+    }
+    .fa-inverse{
+        color: $dark;
+
+       transition: color 0.3s;
+    }
+
+    div{
+        margin: 20px;
+    }
+
+    a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.5em;
+    }
 }
 
 /* Homepage */
@@ -180,29 +208,7 @@ img {
     margin: 0 2vw 0 0;
 }
 
-.signup-button {
-    background-image: $gradient;
-    cursor: pointer;
 
-    color: white;
-    font-size: 0.9em;
-    font-weight: 200;
-    text-transform: uppercase;
-    text-decoration: none;
-
-    border: none;
-    border-radius: 10px;
-    margin: 0 2vw;
-    padding: 1.3%;
-    width: 20%;
-    transition: 0.5s;
-    flex-shrink: 0;
-
-}
-
-.signup-button:hover {
-    opacity: 0.85;
-}
 
 /*#for-fun {
     border: 3px solid;
@@ -251,7 +257,234 @@ img {
     position: relative;
 }
 
-#map {
-    height: 100%;
-    width: 100%;
+/* responsive */
+@media only screen and (max-width: 800px) {
+
+    canvas, #canvas, div canvas{
+        top: 0;
+    }
+    #topnav {
+        #navlogo {
+            display: none;
+        }
+
+        .mobile {
+            display: initial;
+        }
+
+
+        $hamburger-menu-size: 60px;
+        $hamburger-menu-border-radius: .12em;
+        $hamburger-menu-line-height: 2px;
+        $hover-line-height: $hamburger-menu-line-height;
+
+        $content-bg-color: rgba(255, 255, 255, 0.9);
+
+        $main-color: #FEFEFE;
+        //$hover-color: darken($main-color,10%);
+        $anim-duration: .4s;
+
+        .flex-center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        a,
+        a:visited,
+        a:hover,
+        a:active {
+            color: inherit;
+            text-decoration: none;
+        }
+
+
+        position: fixed;
+        top: 10vh;
+        left: 0;
+        z-index: 1;
+
+        .checkbox-toggle {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            cursor: pointer;
+            width: $hamburger-menu-size;
+            height: $hamburger-menu-size;
+            opacity: 0;
+
+            &:checked {
+                & + .hamburger {
+                    > div {
+                        transform: rotate(135deg);
+
+                        &:before,
+                        &:after {
+                            top: 0;
+                            transform: rotate(90deg);
+                        }
+
+                        &:after {
+                            opacity: 0;
+                        }
+                    }
+                }
+
+                & ~ #topnav-right  {
+                    pointer-events: auto;
+                    visibility: visible;
+
+                    > div {
+                        transform: scale(1);
+                        transition-duration: .75s;
+
+                        > div {
+                            opacity: 1;
+                            transition: opacity $anim-duration ease $anim-duration;
+                        }
+                    }
+                }
+            }
+
+            &:hover + .hamburger {
+                box-shadow: inset 0 0 10px rgba(0, 0, 0, .1);
+            }
+
+            &:checked:hover + .hamburger > div {
+                transform: rotate(225deg);
+            }
+        }
+
+        .hamburger {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            width: $hamburger-menu-size;
+            height: $hamburger-menu-size;
+            padding: .5em 1em;
+            background: $main;
+            border-radius: 0 $hamburger-menu-border-radius $hamburger-menu-border-radius 0;
+            cursor: pointer;
+            transition: box-shadow $anim-duration ease;
+            backface-visibility: hidden;
+            @extend .flex-center;
+
+            > div {
+                position: relative;
+                flex: none;
+                width: 100%;
+                height: $hamburger-menu-line-height;
+                background: $main-color;
+                transition: all $anim-duration ease;
+                @extend .flex-center;
+
+                &:before,
+                &:after {
+                    content: '';
+                    position: absolute;
+                    z-index: 1;
+                    top: -$hamburger-menu-size / 6;
+                    left: 0;
+                    width: 100%;
+                    height: $hamburger-menu-line-height;
+                    background: inherit;
+                    transition: all $anim-duration ease;
+                }
+
+                &:after {
+                    top: $hamburger-menu-size / 6;
+                }
+            }
+        }
+
+        #topnav-right {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            visibility: hidden;
+            overflow: hidden;
+            backface-visibility: hidden;
+            outline: 1px solid transparent;
+            @extend .flex-center;
+
+            > div {
+                width: 200vw;
+                height: 200vw;
+                color: $main-color;
+                background: $content-bg-color;
+                border-radius: 50%;
+                transition: all $anim-duration ease;
+                flex: none;
+                transform: scale(0);
+                backface-visibility: hidden;
+                overflow: hidden;
+                @extend .flex-center;
+
+                > div {
+                    text-align: center;
+                    max-width: 90vw;
+                    max-height: 100vh;
+                    opacity: 0;
+                    transition: opacity $anim-duration ease;
+                    overflow-y: auto;
+                    flex: none;
+                    @extend .flex-center;
+                    flex-direction: column;
+                    width: 100%;
+                    height: 100%;
+                    /*> ul {
+                        list-style: none;
+                        padding: 0 1em;
+                        margin: 0;
+                        display: block;
+                        max-height: 100vh;
+
+                        > li {
+                            padding: 0;
+                            margin: 1em;
+                            font-size: 24px;
+                            display: block;*/
+
+                            > a {
+                                position: relative;
+                                cursor: pointer;
+                                transition: color $anim-duration ease;
+                                font-size: 2em;
+                                margin: 10px 0;
+
+                               /*:hover {
+                                    color: $hover-color;
+
+                                    &:after {
+                                        width: 100%;
+                                    }
+                                }*/
+
+                                &:after {
+                                    content: '';
+                                    position: absolute;
+                                    z-index: 1;
+                                    bottom: -.15em;
+                                    left: 0;
+                                    width: 0;
+                                    height: $hover-line-height;
+                                    //background: $hover-color;
+                                    transition: width $anim-duration ease;
+                                }
+                            /*}
+                        }*/
+                    }
+                }
+            }
+        }
+    }
 }
